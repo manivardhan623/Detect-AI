@@ -1,0 +1,18 @@
+Test Evaluation Results
+Date: 2025-10-21 09:34:37
+Number of test samples: 10000
+
+Accuracy:  0.9869
+Precision: 0.9776
+Recall:    0.9966
+F1-Score:  0.9870
+
+Detailed Classification Report:
+              precision    recall  f1-score   support
+
+       Human       1.00      0.98      0.99      5000
+AI-Generated       0.98      1.00      0.99      5000
+
+    accuracy                           0.99     10000
+   macro avg       0.99      0.99      0.99     10000
+weighted avg       0.99      0.99      0.99     10000
