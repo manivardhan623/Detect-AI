@@ -109,11 +109,13 @@ Ensemble model/
 ## 📊 Dataset
 
 ### Source and Composition
-- **Original Dataset**: AI_Human.csv (located in Original_data/)
+- **Original Dataset**: AI_Human.csv 
 - **Total Samples After Preprocessing**: 40,000
 - **Class Distribution**: 
   - Human-written text: 20,000 samples (50%)
   - AI-generated text: 20,000 samples (50%)
+Original Dataset Link:- https://www.kaggle.com/datasets/shanegerami/ai-vs-human-text
+(1.11 GB file)
 
 ### Data Split Strategy
 The dataset is split using stratified sampling to maintain equal class distribution:
