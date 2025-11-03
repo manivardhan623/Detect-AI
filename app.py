@@ -349,7 +349,9 @@ For best results, enter at least 150 words. The model will analyze linguistic pa
             resultCard.classList.remove('active');
             
             try {
-                const response = await fetch('/predict', {
+                // Use the full URL for the fetch request
+                const apiUrl = window.location.origin + '/predict';
+                const response = await fetch(apiUrl, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -359,7 +361,7 @@ For best results, enter at least 150 words. The model will analyze linguistic pa
                 
                 const data = await response.json();
                 
-                if (data.success) {
+                if (response.ok && data.success) {
                     const isAI = data.prediction === 'AI-GENERATED';
                     document.getElementById('resultIcon').textContent = isAI ? '🤖' : '✍️';
                     document.getElementById('resultTitle').textContent = data.prediction;
@@ -369,7 +371,7 @@ For best results, enter at least 150 words. The model will analyze linguistic pa
                     `;
                     resultCard.className = `result-card ${isAI ? 'ai' : 'human'} active`;
                 } else {
-                    showResult(data.error || 'Analysis failed', 'error');
+                    showResult(data.error || 'Analysis failed. Please check the server logs.', 'error');
                 }
             } catch (error) {
                 showResult('Unable to connect to API. Please try again.', 'error');
