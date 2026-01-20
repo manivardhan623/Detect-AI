@@ -1,5 +1,14 @@
+# Ignore GitHub instructions
+.github/instructions/kluster-code-verify.instructions.md
+.kluster
+
+# Default ignored files
+/shelf/
+workspace.xml
+
+# Python cache and logs
 __pycache__/
-*.pyc
-roberta-model/
+*.log
+
+# Model files (handled by Git LFS)
 *.safetensors
-ensemble_models/
